@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { quizQuestions } from '../QuizData/QuizQuestions';
-import { randomiseQuizQuestions } from '../Calculations/RandomiseQuizQuestions';
 import { StartButton } from './QuizComponents/StartButton';
 import { AnswerButton } from './QuizComponents/AnswerButton';
 import { Result } from './QuizComponents/Results';
 import './Quiz.css';
 
-export const Quiz = () => {
+export const Quiz = ({randomQuestions}) => {
     const [activeQuiz, setActiveQuiz] = useState(false);
-    const tenRandomQuestions = randomiseQuizQuestions(quizQuestions);
     const [questionNumber, setQuestionNumber] = useState(0);
     const [countdownTimer, setCountdownTimer] = useState(15);
     const [result, setResult] = useState(0);
@@ -19,7 +16,7 @@ export const Quiz = () => {
       }, []);
 
     const handleAnswerButtonClick = (correctAnswer) => {
-        if (correctAnswer === true && questionNumber < 9){
+        if (correctAnswer === true && questionNumber < 10){
             setResult(result + 1);
         };
         const continueQuiz = questionNumber + 1;
@@ -43,20 +40,20 @@ export const Quiz = () => {
                 <>
                 {!viewResult ? (
                     <>
-                        <h2 className="quiz__question-number">Question {questionNumber + 1}/{tenRandomQuestions.length}</h2>
+                        <h2 className="quiz__question-number">Question {questionNumber + 1}/{randomQuestions.length}</h2>
                         <div className="quiz__statistics-container">
                             <div className="quiz__statistics-box">Your score: {result}</div>
                             <div className="quiz__statistics-box">{countdownTimer}s</div>
                         </div>
-                        <p className="quiz__question">{tenRandomQuestions[questionNumber].question}</p>
+                        <p className="quiz__question">{randomQuestions[questionNumber].question}</p>
                         <div className="quiz__answer-container">
-                            {tenRandomQuestions[questionNumber].possibleAnswers.map((possibleAnswer, index) => (
+                            {randomQuestions[questionNumber].possibleAnswers.map((possibleAnswer, index) => (
                                 <AnswerButton onClick={() => handleAnswerButtonClick(possibleAnswer.correctAnswer)} answer={possibleAnswer.answer}/>
                             ))}
                         </div>
                     </>
                     ) : (
-                    <Result result={result} tenRandomQuestions={tenRandomQuestions}/>
+                    <Result result={result} randomQuestions={randomQuestions}/>
                 )}
                 </>
             )}
