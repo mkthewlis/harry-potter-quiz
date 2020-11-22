@@ -19,8 +19,8 @@
 
 .quiz__statistics-container {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .quiz__statistics-box {
@@ -32,6 +32,8 @@
     border: 2px solid #591313;
     border-radius: 5px;
     font-size: 1.3em;
+    justify-content: center;
+    margin-right: 5px;
 }
 
 .quiz__question-number {

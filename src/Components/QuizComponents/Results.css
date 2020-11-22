@@ -1,0 +1,15 @@
+.results__header {
+    font-size: 3em;
+}
+
+.results__statistics {
+    list-style: none;
+    font-size: 1.8em;
+}
+
+.results__statistics li {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
