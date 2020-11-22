@@ -1,0 +1,13 @@
+.answer-button {
+    min-height: 1.8rem;
+    min-width: 30rem;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #FFC500;
+    color: #7F0909;
+    font-size: 1.5em;
+    padding: .5rem;
+    margin: 1rem 0;
+}

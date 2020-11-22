@@ -13,30 +13,29 @@
     display: flex;
     justify-content: center;
     text-transform: uppercase;
-    font-size: 4em;
+    font-size: 5em;
+    margin-bottom: 0;
 }
 
-.quiz__question-title {
+.quiz__question-number {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 .quiz__question {
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 .quiz__answer-container {
     display: flex;
     flex-direction: column;
-    min-height: 20vh;
     justify-content: space-between;
     align-self: center;
 }
 
-button {
-    width: 20vh;
+.quiz__answer-container button {
     display: flex;
     align-self: center;
     justify-content: center;
