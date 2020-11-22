@@ -1,4 +1,4 @@
-export const questions = [
+export const quizQuestions = [
     {
       question: 'What do the initials J.K. Rowling stand for?',
       possibleAnswers: [
