@@ -17,6 +17,23 @@
     margin-bottom: 0;
 }
 
+.quiz__statistics-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz__statistics-box {
+    min-width: 5rem;
+    min-height: 1.5rem;
+    background-color: #FFC500;
+    padding: 0.5rem;
+    color: #7F0909;
+    border: 2px solid #591313;
+    border-radius: 5px;
+    font-size: 1.3em;
+}
+
 .quiz__question-number {
     display: flex;
     justify-content: center;
