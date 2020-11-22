@@ -1,6 +1,5 @@
 import React from 'react';
 import './Results.css';
-import './Button.css';
 
 export const Result = ({result, tenRandomQuestions}) => (
     <> {result > 5 ? (

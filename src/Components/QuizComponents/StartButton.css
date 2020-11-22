@@ -1,0 +1,15 @@
+.start-button {
+    min-height: 1.8rem;
+    min-width: 20rem;
+    background-color: #FFC500;
+    border-radius: 10px;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #7F0909;
+    color: #7F0909;
+    font-size: 1.5em;
+    padding: .5rem;
+    margin-top: 4rem;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+}
