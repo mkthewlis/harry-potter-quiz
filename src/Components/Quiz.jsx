@@ -17,11 +17,14 @@ export const Quiz = ({randomQuestions}) => {
             timer = setInterval(() => {
                 setCountdownTimer(countdownTimer - 1);
             }, 1000);
+        } else if (countdownTimer === 0 && questionNumber === 9){
+            setViewResult(true);
+            return () => clearInterval(timer);
         } else if (countdownTimer === 0){
             setQuestionNumber(questionNumber + 1);
             setCountdownTimer(15);
             return () => clearInterval(timer);
-        }
+        };
         return () => clearInterval(timer);
     }, [countdownTimer, questionNumber]);
 
@@ -36,7 +39,7 @@ export const Quiz = ({randomQuestions}) => {
         };
         if (questionNumber === 9){
             setViewResult(true);
-        }
+        };
     };
 
     return(
