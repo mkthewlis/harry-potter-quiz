@@ -12,8 +12,18 @@ export const Quiz = ({randomQuestions}) => {
     const [viewResult, setViewResult] = useState(false);
 
     useEffect(() => {
-
-      }, []);
+        let timer;
+        if (countdownTimer > 0) {
+            timer = setInterval(() => {
+                setCountdownTimer(countdownTimer - 1);
+            }, 1000);
+        } else if (countdownTimer === 0){
+            setQuestionNumber(questionNumber + 1);
+            setCountdownTimer(15);
+            return () => clearInterval(timer);
+        }
+        return () => clearInterval(timer);
+    }, [countdownTimer, questionNumber]);
 
     const handleAnswerButtonClick = (correctAnswer) => {
         if (correctAnswer === true && questionNumber < 10){
@@ -22,6 +32,7 @@ export const Quiz = ({randomQuestions}) => {
         const continueQuiz = questionNumber + 1;
         if (continueQuiz < 10){
             setQuestionNumber(continueQuiz);
+            setCountdownTimer(15);
         };
         if (questionNumber === 9){
             setViewResult(true);
@@ -48,7 +59,7 @@ export const Quiz = ({randomQuestions}) => {
                         <p className="quiz__question">{randomQuestions[questionNumber].question}</p>
                         <div className="quiz__answer-container">
                             {randomQuestions[questionNumber].possibleAnswers.map((possibleAnswer, index) => (
-                                <AnswerButton onClick={() => handleAnswerButtonClick(possibleAnswer.correctAnswer)} answer={possibleAnswer.answer}/>
+                                <AnswerButton key={index} onClick={() => handleAnswerButtonClick(possibleAnswer.correctAnswer)} answer={possibleAnswer.answer}/>
                             ))}
                         </div>
                     </>
