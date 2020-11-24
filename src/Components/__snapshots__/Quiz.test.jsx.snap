@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quiz renders without crashing 1`] = `
+<Quiz
+  randomQuestions={
+    Array [
+      Object {
+        "possibleAnswers": Array [
+          Object {
+            "answer": "Joanne Kathleen",
+            "correctAnswer": true,
+          },
+          Object {
+            "answer": "Jane Kathleen",
+            "correctAnswer": false,
+          },
+          Object {
+            "answer": "Jody Katie",
+            "correctAnswer": false,
+          },
+          Object {
+            "answer": "Joanne Katie",
+            "correctAnswer": false,
+          },
+        ],
+        "question": "What do the initials J.K. Rowling stand for?",
+      },
+    ]
+  }
+>
+  <div
+    className="quiz__wrapper"
+  >
+    <header>
+      <h1
+        className="quiz__header"
+      >
+        Harry Potter Quiz
+      </h1>
+    </header>
+    <main>
+      <StartButton
+        onClick={[Function]}
+      >
+        <button
+          className="start-button"
+          onClick={[Function]}
+        >
+          Start Quiz
+        </button>
+      </StartButton>
+    </main>
+  </div>
+</Quiz>
+`;

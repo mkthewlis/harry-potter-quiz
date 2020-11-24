@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders without crashing 1`] = `
+<div
+  className="App"
+>
+  <Quiz
+    randomQuestions={
+      Array [
+        Object {
+          "possibleAnswers": Array [
+            Object {
+              "answer": "Brian",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Percival",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Wulfric",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Severus",
+              "correctAnswer": true,
+            },
+          ],
+          "question": "Which of these is not one of Albus Dumbledores middle names?",
+        },
+        Object {
+          "possibleAnswers": Array [
+            Object {
+              "answer": "Aragon",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Aragog",
+              "correctAnswer": true,
+            },
+            Object {
+              "answer": "Spidey",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Fang",
+              "correctAnswer": false,
+            },
+          ],
+          "question": "Hagrid has a giant pet spider by the name of:",
+        },
+        Object {
+          "possibleAnswers": Array [
+            Object {
+              "answer": "Hogwarts School of Witchcraft & Wizardry",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Durmstrang Institute",
+              "correctAnswer": true,
+            },
+            Object {
+              "answer": "Drumstead Institute",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Beauxbatons Academy of Magic",
+              "correctAnswer": false,
+            },
+          ],
+          "question": "What school does Viktor Krum go to?",
+        },
+        Object {
+          "possibleAnswers": Array [
+            Object {
+              "answer": "Dwarves",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Elves",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Goblins",
+              "correctAnswer": true,
+            },
+            Object {
+              "answer": "Muggles",
+              "correctAnswer": false,
+            },
+          ],
+          "question": "Which species operates Gringotts Wizarding Bank?",
+        },
+        Object {
+          "possibleAnswers": Array [
+            Object {
+              "answer": "Joanne Kathleen",
+              "correctAnswer": true,
+            },
+            Object {
+              "answer": "Jane Kathleen",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Jody Katie",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Joanne Katie",
+              "correctAnswer": false,
+            },
+          ],
+          "question": "What do the initials J.K. Rowling stand for?",
+        },
+        Object {
+          "possibleAnswers": Array [
+            Object {
+              "answer": "Weasleys Tricks & Treats",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Weasleys Wizard Treats",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Weasleys Wicked Treats",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Weasleys Wizard Wheezes",
+              "correctAnswer": true,
+            },
+          ],
+          "question": "What was the name of the Weasley twins shop?",
+        },
+        Object {
+          "possibleAnswers": Array [
+            Object {
+              "answer": "Scabbers",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Wormtail",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Peter Pettigrew",
+              "correctAnswer": true,
+            },
+            Object {
+              "answer": "Hedwig",
+              "correctAnswer": false,
+            },
+          ],
+          "question": "What is the real name of Ronald Weasleys pet rat?",
+        },
+        Object {
+          "possibleAnswers": Array [
+            Object {
+              "answer": "Severus Snape",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "He Who Must Not Be Named",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Bellatrix Lestrange",
+              "correctAnswer": true,
+            },
+            Object {
+              "answer": "Lucius Malfoy",
+              "correctAnswer": false,
+            },
+          ],
+          "question": "Who killed Dobby?",
+        },
+        Object {
+          "possibleAnswers": Array [
+            Object {
+              "answer": "Fluxweed",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Leeches",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Lacewing Flies",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "Unicorn Blood",
+              "correctAnswer": true,
+            },
+          ],
+          "question": "Which ingredient is not required to make Polyjuice Potion?",
+        },
+        Object {
+          "possibleAnswers": Array [
+            Object {
+              "answer": "12",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "7",
+              "correctAnswer": false,
+            },
+            Object {
+              "answer": "6",
+              "correctAnswer": true,
+            },
+            Object {
+              "answer": "11",
+              "correctAnswer": false,
+            },
+          ],
+          "question": "How many named ghosts live at Hogwarts?",
+        },
+      ]
+    }
+  />
+</div>
+`;
