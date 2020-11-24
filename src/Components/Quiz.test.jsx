@@ -40,9 +40,9 @@ describe('Quiz', () => {
         expect(onClickMock).not.toHaveBeenCalled();
     });
     describe('after the start button has been clicked', () => {
-        it('should render the QuizSection component', () => {
-            wrapper.find(StartButton).simulate('click');
-            expect(wrapper.find('.quiz__header').exists()).toBeTruthy();
-        });
+      it('should render the QuizSection component', () => {
+          wrapper.find('.start-button').simulate('click');
+          expect(onClickMock).toBeCalled();
+      });
     });
 });     
