@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { StartButton } from './QuizComponents/StartButton';
-import { AnswerButton } from './QuizComponents/AnswerButton';
-import { Result } from './QuizComponents/Results';
+import { Results } from './QuizComponents/Results';
 import './Quiz.css';
+import { QuestionSection } from './QuizComponents/QuestionSection';
 
 export const Quiz = ({randomQuestions}) => {
     const [activeQuiz, setActiveQuiz] = useState(false);
@@ -47,7 +47,7 @@ export const Quiz = ({randomQuestions}) => {
     return(
     <div className="quiz__wrapper">
         <header>
-            <h1 className="quiz__header">{!viewResult ? ('Harry Potter Pub Quiz') : ('Your Results')}</h1>
+            <h1 className="quiz__header">{!viewResult ? ('Harry Potter Quiz') : ('Your Results')}</h1>
         </header>
         <main>
             {!activeQuiz ? (
@@ -55,21 +55,15 @@ export const Quiz = ({randomQuestions}) => {
             ) : (
                 <>
                 {!viewResult ? (
-                    <>
-                        <h2 className="quiz__question-number">Question {questionNumber + 1}/{randomQuestions.length}</h2>
-                        <div className="quiz__statistics-container">
-                            <div className="quiz__statistics-box">Your score: {result}</div>
-                            <div className="quiz__statistics-box">{countdownTimer}s</div>
-                        </div>
-                        <p className="quiz__question">{randomQuestions[questionNumber].question}</p>
-                        <div className="quiz__answer-container">
-                            {randomQuestions[questionNumber].possibleAnswers.map((possibleAnswer, index) => (
-                                <AnswerButton onClick={() => handleAnswerButtonClick(possibleAnswer.correctAnswer)} answer={possibleAnswer.answer}/>
-                            ))}
-                        </div>
-                    </>
+                    <QuestionSection 
+                        questionNumber={questionNumber} 
+                        randomQuestions={randomQuestions}
+                        countdownTimer={countdownTimer} 
+                        result={result}
+                        handleAnswerButtonClick={handleAnswerButtonClick}
+                    />
                     ) : (
-                    <Result result={result} randomQuestions={randomQuestions}/>
+                    <Results result={result} randomQuestions={randomQuestions}/>
                 )}
                 </>
             )}
