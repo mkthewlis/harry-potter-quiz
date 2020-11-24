@@ -13,20 +13,22 @@ export const Quiz = ({randomQuestions}) => {
 
     useEffect(() => {
         let timer;
-        if (countdownTimer > 0) {
-            timer = setInterval(() => {
-                setCountdownTimer(countdownTimer - 1);
-            }, 1000);
-        } else if (countdownTimer === 0 && questionNumber === 9){
-            setViewResult(true);
-            return () => clearInterval(timer);
-        } else if (countdownTimer === 0){
-            setQuestionNumber(questionNumber + 1);
-            setCountdownTimer(15);
+        if (activeQuiz){
+            if (countdownTimer > 0) {
+                timer = setInterval(() => {
+                    setCountdownTimer(countdownTimer - 1);
+                }, 1000);
+            } else if (countdownTimer === 0 && questionNumber === 9){
+                setViewResult(true);
+                return () => clearInterval(timer);
+            } else if (countdownTimer === 0){
+                setQuestionNumber(questionNumber + 1);
+                setCountdownTimer(15);
+                return () => clearInterval(timer);
+            };
             return () => clearInterval(timer);
         };
-        return () => clearInterval(timer);
-    }, [countdownTimer, questionNumber]);
+    }, [activeQuiz, countdownTimer, questionNumber]);
 
     const handleAnswerButtonClick = (correctAnswer) => {
         if (correctAnswer === true && questionNumber < 10){
@@ -62,7 +64,7 @@ export const Quiz = ({randomQuestions}) => {
                         <p className="quiz__question">{randomQuestions[questionNumber].question}</p>
                         <div className="quiz__answer-container">
                             {randomQuestions[questionNumber].possibleAnswers.map((possibleAnswer, index) => (
-                                <AnswerButton key={index} onClick={() => handleAnswerButtonClick(possibleAnswer.correctAnswer)} answer={possibleAnswer.answer}/>
+                                <AnswerButton onClick={() => handleAnswerButtonClick(possibleAnswer.correctAnswer)} answer={possibleAnswer.answer}/>
                             ))}
                         </div>
                     </>
