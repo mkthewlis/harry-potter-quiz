@@ -18,11 +18,7 @@ describe('Quiz', () => {
           ],
         }
     ];
-    
-    const questionNumberMock = 0;
-    const countdownTimerMock = 15;
-    const resultMock = 0;
-    const handleAnswerButtonClick = jest.fn(); 
+  
     beforeEach(() => {
         wrapper = mount(
           <Quiz randomQuestions={randomQuestionsMock}/>,

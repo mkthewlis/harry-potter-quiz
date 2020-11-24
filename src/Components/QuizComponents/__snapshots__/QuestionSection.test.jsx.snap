@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuestionSection renders without crashing 1`] = `
+<QuestionSection
+  countdownTimer={15}
+  handleAnswerButtonClick={[MockFunction]}
+  questionNumber={0}
+  randomQuestions={
+    Array [
+      Object {
+        "possibleAnswers": Array [
+          Object {
+            "answer": "Joanne Kathleen",
+            "correctAnswer": true,
+          },
+          Object {
+            "answer": "Jane Kathleen",
+            "correctAnswer": false,
+          },
+          Object {
+            "answer": "Jody Katie",
+            "correctAnswer": false,
+          },
+          Object {
+            "answer": "Joanne Katie",
+            "correctAnswer": false,
+          },
+        ],
+        "question": "What do the initials J.K. Rowling stand for?",
+      },
+    ]
+  }
+  result={0}
+>
+  <section>
+    <h2
+      className="question-section__question-number"
+    >
+      Question 
+      1
+      /
+      1
+    </h2>
+    <div
+      className="question-section__statistics-container"
+    >
+      <div
+        className="question-section__statistics-box"
+      >
+        Your score: 
+        0
+      </div>
+      <div
+        className="question-section__statistics-box"
+      >
+        15
+        s
+      </div>
+    </div>
+    <p
+      className="question-section__question"
+    >
+      What do the initials J.K. Rowling stand for?
+    </p>
+    <div
+      className="question-section__answer-container"
+    >
+      <AnswerButton
+        answer="Joanne Kathleen"
+        key="0"
+        onClick={[Function]}
+      >
+        <button
+          className="answer-button"
+          onClick={[Function]}
+        >
+          Joanne Kathleen
+        </button>
+      </AnswerButton>
+      <AnswerButton
+        answer="Jane Kathleen"
+        key="1"
+        onClick={[Function]}
+      >
+        <button
+          className="answer-button"
+          onClick={[Function]}
+        >
+          Jane Kathleen
+        </button>
+      </AnswerButton>
+      <AnswerButton
+        answer="Jody Katie"
+        key="2"
+        onClick={[Function]}
+      >
+        <button
+          className="answer-button"
+          onClick={[Function]}
+        >
+          Jody Katie
+        </button>
+      </AnswerButton>
+      <AnswerButton
+        answer="Joanne Katie"
+        key="3"
+        onClick={[Function]}
+      >
+        <button
+          className="answer-button"
+          onClick={[Function]}
+        >
+          Joanne Katie
+        </button>
+      </AnswerButton>
+    </div>
+  </section>
+</QuestionSection>
+`;
