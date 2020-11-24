@@ -11,8 +11,8 @@ export const QuestionSection = ({questionNumber, randomQuestions, countdownTimer
         </div>
         <p className="question-section__question">{randomQuestions[questionNumber].question}</p>
         <div className="question-section__answer-container">
-            {randomQuestions[questionNumber].possibleAnswers.map((possibleAnswer) => (
-                <AnswerButton onClick={() => handleAnswerButtonClick(possibleAnswer.correctAnswer)} answer={possibleAnswer.answer}/>
+            {randomQuestions[questionNumber].possibleAnswers.map((possibleAnswer, index) => (
+                <AnswerButton key={index} onClick={() => handleAnswerButtonClick(possibleAnswer.correctAnswer)} answer={possibleAnswer.answer}/>
             ))}
         </div>
     </section>

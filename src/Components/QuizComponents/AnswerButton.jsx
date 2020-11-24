@@ -1,8 +1,8 @@
 import React from 'react';
 import './AnswerButton.css';
 
-export const AnswerButton = ({answer, ...onClick}) => (
+export const AnswerButton = ({index, answer, ...onClick}) => (
     <>
-        <button className="answer-button" {...onClick}>{answer}</button>
+        <button key={index} className="answer-button" {...onClick}>{answer}</button>
     </>
 );
