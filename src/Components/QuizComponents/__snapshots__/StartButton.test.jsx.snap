@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StartButton renders without crashing 1`] = `
+<Fragment>
+  <button
+    _isMockFunction={true}
+    className="start-button"
+    getMockImplementation={[Function]}
+    getMockName={[Function]}
+    mock={
+      Object {
+        "calls": Array [],
+        "instances": Array [],
+        "invocationCallOrder": Array [],
+        "results": Array [],
+      }
+    }
+    mockClear={[Function]}
+    mockImplementation={[Function]}
+    mockImplementationOnce={[Function]}
+    mockName={[Function]}
+    mockRejectedValue={[Function]}
+    mockRejectedValueOnce={[Function]}
+    mockReset={[Function]}
+    mockResolvedValue={[Function]}
+    mockResolvedValueOnce={[Function]}
+    mockRestore={[Function]}
+    mockReturnThis={[Function]}
+    mockReturnValue={[Function]}
+    mockReturnValueOnce={[Function]}
+  >
+    Start Quiz
+  </button>
+</Fragment>
+`;
