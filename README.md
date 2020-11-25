@@ -1,5 +1,7 @@
 # Harry Potter Quiz
 
+![Harry Potter Quiz](https://github.com/mkthewlis/harry-potter-quiz/blob/main/src/assets/harry-potter-quiz.png)
+
 A single-page quiz application that tests users on their knowledge of Harry Potter trivia. 
 
 ## Technologies used:
